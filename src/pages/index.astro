@@ -1,0 +1,311 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Jay Salvi · જય સાળવી">
+
+  <!-- ░░ Hero — BarsatKhadka portfolioV1 Masthead Layout ░░ -->
+  <header class="hero">
+    <!-- Top Line -->
+    <div class="hero-top">
+      <span>जय साळवी · જય સાળવી</span>
+      <span>Computer Engineer · Researcher</span>
+    </div>
+
+    <!-- Middle Grid: Name/Bio on Left, News Column on Right -->
+    <div class="hero-content-grid">
+      <div class="hero-left">
+        <h1 class="hero-title">
+          <span class="hero-title-first">Jay</span>
+          <span class="hero-title-last">Salvi</span>
+        </h1>
+
+        <p class="hero-bio-text">
+          Quantitative & AI researcher with specializing in low-level execution platforms, automated feature engineering and blackbox_os architecture.
+        </p>
+      </div>
+
+      <!-- Right News Column -->
+      <aside class="hero-news">
+        <div class="news-header">Latest News & Updates</div>
+        <ul class="news-list">
+          <li>
+            <span class="news-date">Sept 2026</span>
+            <span class="news-text">Published SVA Formal Verification patch for Ibex RISC-V decoder.</span>
+          </li>
+          <li>
+            <span class="news-date">August 2026</span>
+            <span class="news-text">Released Blackbox OS frame-aware causal world model on ARC-AGI benchmark.</span>
+          </li>
+          <li>
+            <span class="news-date">July 2026</span>
+            <span class="news-text">Automated netlist extraction from raw GDSII layout geometries.</span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- Hero Bottom Index Nav -->
+    <nav class="hero-nav">
+      <ul class="hero-nav-links">
+        <li><a href="#about"><span class="hero-nav-num">i</span>Currently</a></li>
+        <li><a href="#research"><span class="hero-nav-num">ii</span>Research</a></li>
+        <li><a href="#projects"><span class="hero-nav-num">iii</span>Projects</a></li>
+        <li><a href="#writing"><span class="hero-nav-num">iv</span>Writing & SOPs</a></li>
+        <li><a href="#contact"><span class="hero-nav-num">v</span>Contact</a></li>
+      </ul>
+      <a href="#about" style="color: var(--muted); text-decoration: none;">Scroll ↓</a>
+    </nav>
+  </header>
+
+  <!-- ░░ Main 2-Column Wrapper (Sidebar on Left, Content on Right) ░░ -->
+  <div class="main-wrapper">
+
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <!-- Rectangular Profile Frame -->
+      <img src="/profile.png" alt="Jay Salvi Profile Photo" class="sidebar-profile-img" />
+
+      <!-- Sidebar Masthead Name -->
+      <div class="sidebar-name">
+        Jay<br />
+        <span style="font-style: italic; font-weight: 360; color: var(--muted);">Salvi</span>
+      </div>
+      <div class="sidebar-native-name">જય સાળવી</div>
+      <div class="sidebar-role">Computer Engineer · Researcher</div>
+
+      <!-- Contact & Social Links -->
+      <div class="sidebar-contact-list">
+        <div class="sidebar-contact-item">
+          <span>📧</span>
+          <a href="mailto:jaysalvi85@gmail.com" class="link-slide">jaysalvi11@gmail.com</a>
+        </div>
+        <div class="sidebar-contact-item">
+          <span>💻</span>
+          <a href="https://github.com/Jay846" target="_blank" rel="noopener" class="link-slide">github.com/Jay846</a>
+        </div>
+        <div class="sidebar-contact-item">
+          <span>🌐</span>
+          <a href="https://jay846.gi" target="_blank" rel="noopener" class="link-slide">jay846.github.io</a>
+        </div>
+      </div>
+
+      <!-- Research Focus -->
+      <div style="border-top: 1px solid var(--hairline); padding-top: 24px; margin-top: 24px;">
+        <p style="font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px;">Research Focus</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+          <span class="tag">AI Agent Architectures</span>
+          <span class="tag">Formal Verification</span>
+          <span class="tag">RISC-V Security</span>
+          <span class="tag">Causal World Models</span>
+          <span class="tag">ASIC Reverse Eng</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Main Content -->
+    <main class="main-content">
+
+      <!-- Section i: Currently / About -->
+      <section id="about" class="section-block">
+        <h2 class="section-head-title">Currently</h2>
+        <p>
+          Working at the intersection of formal hardware security verification and cognitive AI agent architectures. Currently engineering <strong>Blackbox OS</strong> for automated SystemVerilog Assertion (SVA) synthesis and evaluating causal program synthesis engines on the ARC-AGI benchmark.
+        </p>
+      </section>
+
+      <!-- Section ii: Research -->
+      <section id="research" class="section-block">
+        <h2 class="section-head-title">Selected Research & Preprints</h2>
+
+        <div class="paper">
+          <div class="paper-meta">
+            <span>Sept 2026</span>
+            <span class="tag">Hardware Security</span>
+            <span class="tag">Formal Verification</span>
+          </div>
+          <h3 class="paper-title">
+            Formal Verification of Instruction-Glitch Fault Attacks in RISC-V Decoders
+          </h3>
+          <p class="paper-authors">Jay Salvi</p>
+          <p style="font-size: 15px; color: var(--muted); margin-bottom: 12px;">
+            Automated SystemVerilog Assertion (SVA) generation and bounded model checking for fault-injection hardness on lowRISC Ibex CPU cores without human-authored testbenches.
+          </p>
+          <div class="paper-links">
+            <a href="#">[PDF]</a>
+            <a href="#">[Code]</a>
+            <a href="#">[SVA Proofs]</a>
+            <a href="#">[BibTeX]</a>
+          </div>
+        </div>
+
+        <div class="paper">
+          <div class="paper-meta">
+            <span>August 2026</span>
+            <span class="tag">AI & Cognitive Systems</span>
+          </div>
+          <h3 class="paper-title">
+            Blackbox OS: Frame-Aware Causal World Models for Visual Program Synthesis
+          </h3>
+          <p class="paper-authors">Jay Salvi</p>
+          <p style="font-size: 15px; color: var(--muted); margin-bottom: 12px;">
+            An empirical evaluation of structured memory design and multi-agent problem solving on the ARC-AGI benchmark. Introduces an 8-stage causal analysis pipeline with active state-space exploration.
+          </p>
+          <div class="paper-links">
+            <a href="#">[PDF]</a>
+            <a href="#">[Benchmark]</a>
+            <a href="#">[Dataset]</a>
+            <a href="#">[BibTeX]</a>
+          </div>
+        </div>
+
+        <div class="paper">
+          <div class="paper-meta">
+            <span>July 2026</span>
+            <span class="tag">ASIC Reverse Engineering</span>
+          </div>
+          <h3 class="paper-title">
+            Automated Netlist Extraction & Verification from GDSII Layouts
+          </h3>
+          <p class="paper-authors">Jay Salvi</p>
+          <p style="font-size: 15px; color: var(--muted); margin-bottom: 12px;">
+            Physical GDSII geometry extraction to functional SystemVerilog netlist reconstruction using graph neural execution engines and state-space solving.
+          </p>
+          <div class="paper-links">
+            <a href="#">[PDF]</a>
+            <a href="#">[Code]</a>
+            <a href="#">[Abstract]</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section iii: Projects & Open Source -->
+      <section id="projects" class="section-block">
+        <h2 class="section-head-title">Projects & Open Source</h2>
+
+        <!-- Project 1: Blackbox-OS -->
+        <div class="paper">
+          <div class="paper-meta">
+            <span class="tag">Python</span>
+            <span class="tag">LangGraph</span>
+            <span class="tag">LLM Orchestration</span>
+          </div>
+          <h3 class="paper-title">
+            <a href="https://github.com/Jay846/Blackbox-OS" target="_blank" rel="noopener">Blackbox-OS</a>
+          </h3>
+          <p style="font-size: 15px; color: var(--muted); margin-bottom: 12px;">
+            A reliable, sandboxed execution runtime and modular orchestrator for LLM agents at scale with 8-stage causal analysis and AST loopback verification.
+          </p>
+          <div class="paper-links">
+            <a href="https://github.com/Jay846/Blackbox-OS" target="_blank" rel="noopener">GitHub Repo</a>
+          </div>
+        </div>
+
+        <!-- Project 2: Neuro-Symbolic-Hypothesis-Engine -->
+        <div class="paper">
+          <div class="paper-meta">
+            <span class="tag">Python</span>
+            <span class="tag">Neuro-Symbolic</span>
+            <span class="tag">Causal Reasoning</span>
+          </div>
+          <h3 class="paper-title">
+            <a href="https://github.com/Jay846/Neuro-Symbolic-Hypothesis-Engine" target="_blank" rel="noopener">Neuro-Symbolic-Hypothesis-Engine</a>
+          </h3>
+          <p style="font-size: 15px; color: var(--muted); margin-bottom: 12px;">
+            A neuro-symbolic synthesis engine combining frame-aware memory, causal world modeling, and hypothesis search for program synthesis on ARC-AGI tasks.
+          </p>
+          <div class="paper-links">
+            <a href="https://github.com/Jay846/Neuro-Symbolic-Hypothesis-Engine" target="_blank" rel="noopener">GitHub Repo</a>
+          </div>
+        </div>
+
+        <!-- Project 3: asic-puzzle-2026-solution -->
+        <div class="paper">
+          <div class="paper-meta">
+            <span class="tag">Python</span>
+            <span class="tag">GDSII / ASIC</span>
+            <span class="tag">SystemVerilog</span>
+          </div>
+          <h3 class="paper-title">
+            <a href="https://github.com/Jay846/asic-puzzle-2026-solution" target="_blank" rel="noopener">asic-puzzle-2026-solution</a>
+          </h3>
+          <p style="font-size: 15px; color: var(--muted); margin-bottom: 12px;">
+            End-to-end automated reverse-engineering flow extracting gate-level netlists from raw GDSII silicon layout geometry to solve the Jane Street ASIC challenge.
+          </p>
+          <div class="paper-links">
+            <a href="https://github.com/Jay846/asic-puzzle-2026-solution" target="_blank" rel="noopener">GitHub Repo</a>
+          </div>
+        </div>
+
+        <!-- Open Source Contributions Subsection -->
+        <div style="margin-top: 36px; padding-top: 24px; border-top: 1px dashed var(--hairline);">
+          <h3 style="font-family: var(--font-ui); font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent-2); margin-bottom: 16px;">
+            Open Source Upstream Contributions
+          </h3>
+
+          <div class="paper">
+            <div class="paper-meta">
+              <span class="tag">SystemVerilog</span>
+              <span class="tag">lowRISC / Ibex</span>
+            </div>
+            <h3 class="paper-title">
+              <a href="https://github.com/lowRISC/ibex" target="_blank" rel="noopener">lowRISC Ibex CPU Core</a>
+            </h3>
+            <p style="font-size: 15px; color: var(--muted); margin-bottom: 12px;">
+              Formal instruction decoder patch with zero-overhead glitch detection logic formally verified under bounded model checkers.
+            </p>
+            <div class="paper-links">
+              <a href="https://github.com/Jay846" target="_blank" rel="noopener">Pull Request / Patch</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Section iv: Writing & SOPs -->
+      <section id="writing" class="section-block">
+        <h2 class="section-head-title">Writings & Technical SOPs</h2>
+
+        <div class="paper">
+          <div class="paper-meta">
+            <span>Sept 12, 2026 · 6 min read</span>
+            <span class="tag">Hardware Security</span>
+          </div>
+          <h3 class="paper-title">
+            SOP: Autonomous Tri-Role Agent Verification of Hardware Cores
+          </h3>
+          <p style="font-size: 15px; color: var(--muted); margin-bottom: 12px;">
+            A step-by-step methodology for executing automated SystemVerilog assertion synthesis, bounded model checking, and hardware fault verification.
+          </p>
+        </div>
+
+        <div class="paper">
+          <div class="paper-meta">
+            <span>August 27, 2026 · 10 min read</span>
+            <span class="tag">Causal Reasoning</span>
+          </div>
+          <h3 class="paper-title">
+            Designing Frame-Aware Causal World Models for Program Synthesis
+          </h3>
+          <p style="font-size: 15px; color: var(--muted); margin-bottom: 12px;">
+            How we constructed a frame-aware memory hierarchy and causal analysis pipeline to move beyond brittle heuristic-based program synthesis.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section v: Contact -->
+      <section id="contact" class="section-block">
+        <h2 class="section-head-title">Contact</h2>
+        <p>
+          Open to research collaborations, formal security audits, and high-assurance systems engineering discussions.
+        </p>
+        <div class="paper-links" style="font-size: 15px;">
+          <a href="mailto:jaysalvi11@gmail.com">jay85salvi@gmail.com</a> • 
+          <a href="https://github.com/Jay846" target="_blank" rel="noopener">GitHub (@Jay846)</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</Layout>

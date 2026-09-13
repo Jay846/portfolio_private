@@ -1,0 +1,73 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "Jay Salvi · જય સાળવી", 
+  description = "Jay Salvi — computer engineer and researcher. CS research in autonomous AI agent architectures, formal microarchitectural verification, and causal world models." 
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="author" content="Jay Salvi" />
+  <meta name="theme-color" content="#FAF8F3" />
+
+  <!-- Google Fonts: Fraunces, Newsreader, Hanken Grotesk, JetBrains Mono, Noto Serif Devanagari -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Noto+Serif+Devanagari:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<body>
+
+  <!-- Live Raindrop MP4 Video Background Layer -->
+  <div class="video-background-container">
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="/background.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="bg-overlay"></div>
+
+  <!-- Pinned Hero Splash Art — Dissolves as you scroll down -->
+  <div class="hero-splash-container" id="hero-splash">
+    <img src="/heroSplash.webp" alt="Phoenix Hero Artwork" class="hero-splash-img" />
+  </div>
+
+  <!-- Page Content Container -->
+  <slot />
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; {new Date().getFullYear()} Jay Salvi. Open source, open science.</p>
+    <p>Jay Salvi · જય સાળવી</p>
+  </footer>
+
+  <!-- Fixed Hero Splash Dissolve Script matching BarsatKhadka portfolioV1 -->
+  <script>
+    const heroSplash = document.getElementById('hero-splash');
+    if (heroSplash) {
+      const FADE_DISTANCE = 420;
+      const CEILING = 0.75;
+      
+      const updateOpacity = () => {
+        const scrollY = window.scrollY;
+        const opacity = CEILING * Math.max(0, 1 - scrollY / FADE_DISTANCE);
+        heroSplash.style.opacity = opacity.toString();
+        heroSplash.style.visibility = opacity <= 0.01 ? 'hidden' : 'visible';
+      };
+
+      updateOpacity();
+      window.addEventListener('scroll', updateOpacity, { passive: true });
+    }
+  </script>
+</body>
+</html>

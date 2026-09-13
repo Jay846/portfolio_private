@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="375" viewBox="0 0 300 375">
+  <rect width="100%" height="100%" fill="#E7E5E4"/>
+  <rect x="10" y="10" width="280" height="355" rx="6" fill="none" stroke="#D6D3D1" stroke-width="2"/>
+  <circle cx="150" cy="140" r="55" fill="#78716C"/>
+  <path d="M70 290 C70 215, 230 215, 230 290 Z" fill="#78716C"/>
+  <text x="150" y="335" font-family="-apple-system, sans-serif" font-size="16" font-weight="600" fill="#44403C" text-anchor="middle">JAY SALVI</text>
+</svg>

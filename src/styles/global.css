@@ -1,0 +1,550 @@
+/* ==========================================================================
+   BarsatKhadka/portfolioV1 Exact CSS System Replicated for Jay Salvi
+   ========================================================================== */
+
+:root {
+  --bg: #FAF8F3;
+  --panel: rgba(26, 26, 27, 0.026);
+  --card: rgba(26, 26, 27, 0.022);
+  --text: #16140F;
+  --muted: rgba(34, 30, 24, 0.54);
+  --faint: rgba(34, 30, 24, 0.32);
+  --border: rgba(34, 30, 24, 0.10);
+  --accent: #1F3A52;
+  /* deep indigo ink */
+  --accent-2: #B5341F;
+  /* vermilion seal */
+  --paper: #7C2D12;
+  /* burnt sienna */
+  --hairline: rgba(34, 30, 24, 0.08);
+
+  --font-display: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+  --font-text: 'Newsreader', 'Iowan Old Style', Georgia, serif;
+  --font-ui: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-devanagari: 'Noto Serif Devanagari', 'Tiro Devanagari Sanskrit', 'Mukta', serif;
+  --font-gujarati: 'Noto Sans Gujarati', 'Shruti', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #FAF8F3;
+  scroll-behavior: smooth;
+  color: var(--text);
+  font-family: var(--font-text);
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: radial-gradient(rgba(26, 26, 27, 0.030) 0.5px, transparent 0.5px);
+  background-size: 24px 24px;
+}
+
+/* Video background under wash */
+.video-background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.45;
+  filter: brightness(0.95) contrast(1.05);
+}
+
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(250, 248, 243, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(52px, 8vw, 110px);
+  font-weight: 360;
+  line-height: 0.88;
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 380;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.32;
+  font-family: var(--font-text);
+}
+
+p {
+  margin-bottom: 1.25em;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: var(--accent-2);
+}
+
+a.link-slide {
+  position: relative;
+}
+
+a.link-slide::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--border);
+  transition: background-color 0.3s ease, height 0.3s ease;
+}
+
+a.link-slide:hover::after {
+  background-color: var(--accent-2);
+  height: 2px;
+}
+
+/* ░░ Hero Splash Art — BarsatKhadka portfolioV1 exact dissolve ░░ */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 36px 40px 32px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.hero-splash-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(750px, 70vw, 550px);
+  z-index: 1;
+  pointer-events: none;
+  will-change: opacity;
+}
+
+.hero-splash-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: saturate(1.05) contrast(1.12) brightness(1.08) blur(0.5px);
+  mix-blend-mode: multiply;
+  mask-image: radial-gradient(ellipse 50% 74% at 45% 44%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.45) 40%, rgba(0, 0, 0, 0.15) 55%, rgba(0, 0, 0, 0.03) 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 50% 74% at 45% 44%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.45) 40%, rgba(0, 0, 0, 0.15) 55%, rgba(0, 0, 0, 0.03) 70%, transparent 100%);
+}
+
+.hero-top {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+.hero-content-grid {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-left {
+  flex: 1;
+  max-width: 580px;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  line-height: 0.86;
+  letter-spacing: -0.035em;
+  font-weight: 360;
+  font-size: clamp(54px, 7vw, 108px);
+}
+
+.hero-title-first {
+  display: block;
+  color: var(--text);
+}
+
+.hero-title-last {
+  display: block;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.hero-bio-text {
+  margin-top: 28px;
+  font-family: var(--font-ui);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+  max-width: 44ch;
+}
+
+/* News Column */
+.hero-news {
+  width: 380px;
+  flex-shrink: 0;
+  border-left: 1px solid var(--hairline);
+  padding-left: 40px;
+}
+
+.news-header {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.news-header::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--accent-2);
+  display: inline-block;
+}
+
+.news-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.news-date {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.news-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+/* Nav Index Bar */
+.hero-nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+  font-family: var(--font-ui);
+  font-size: 11.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero-nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.hero-nav-links a {
+  color: var(--muted);
+}
+
+.hero-nav-num {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--accent-2);
+  margin-right: 6px;
+  font-size: 13px;
+  letter-spacing: 0;
+}
+
+/* ░░ Main 2-Column Section ░░ */
+.main-wrapper {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 380px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--hairline);
+  padding: 40px 32px;
+  background: var(--panel);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-profile-img {
+  width: 140px;
+  height: 175px;
+  object-fit: cover;
+  object-position: center 28%;
+  filter: grayscale(0.15) contrast(1.02);
+  box-shadow: 0 1px 0 rgba(26, 26, 26, 0.10);
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.sidebar-name {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 380;
+  line-height: 0.92;
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+}
+
+.sidebar-native-name {
+  font-family: var(--font-devanagari);
+  font-size: 20px;
+  color: var(--accent-2);
+  margin-bottom: 12px;
+}
+
+.sidebar-role {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.sidebar-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--text);
+  margin-bottom: 36px;
+}
+
+.sidebar-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-contact-item svg {
+  color: var(--muted);
+}
+
+.main-content {
+  flex: 1;
+  padding: 48px 56px;
+}
+
+/* Sections & Research Cards */
+.section-block {
+  margin-bottom: 64px;
+  scroll-margin-top: 2rem;
+}
+
+.section-head-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 380;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+}
+
+.paper {
+  position: relative;
+  padding: 24px 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 24px;
+  transition: background-color 0.3s ease;
+}
+
+.paper::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: 18px;
+  bottom: 18px;
+  width: 3px;
+  background: var(--accent-2);
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.paper:hover::before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.paper-meta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+  display: flex;
+  gap: 12px;
+}
+
+.paper-title {
+  font-family: var(--font-text);
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.paper-authors {
+  font-size: 14.5px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.paper-links {
+  display: flex;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.paper-links a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.paper-links a:hover {
+  color: var(--accent-2);
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  background-color: rgba(34, 30, 24, 0.05);
+  color: var(--muted);
+  padding: 3px 10px;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+/* Footer */
+.site-footer {
+  padding: 32px 40px;
+  border-top: 1px solid var(--hairline);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 24px 20px;
+  }
+
+  .hero-content-grid {
+    flex-direction: column;
+  }
+
+  .hero-news {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--hairline);
+    padding-left: 0;
+    padding-top: 24px;
+  }
+
+  .main-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .main-content {
+    padding: 32px 20px;
+  }
+}
