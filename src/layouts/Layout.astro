@@ -2,11 +2,13 @@
 interface Props {
   title?: string;
   description?: string;
+  isHome?: boolean;
 }
 
 const { 
   title = "Jay Salvi · જય સાળવી", 
-  description = "Jay Salvi — computer engineer and researcher. CS research in autonomous AI agent architectures, formal microarchitectural verification, and causal world models." 
+  description = "Jay Salvi — computer engineer and researcher. CS research in autonomous AI agent architectures, formal microarchitectural verification, and causal world models.",
+  isHome = Astro.url.pathname === '/' || Astro.url.pathname === ''
 } = Astro.props;
 ---
 
@@ -26,6 +28,36 @@ const {
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Noto+Serif+Devanagari:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/src/styles/global.css" />
+  
+  {!isHome && (
+    <style>
+      .article-container {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 40px 24px 80px 24px;
+        position: relative;
+        z-index: 5;
+      }
+      .article-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 24px;
+        margin-bottom: 36px;
+        border-bottom: 1px solid var(--hairline);
+        font-family: var(--font-ui);
+        font-size: 13px;
+      }
+      .article-nav a {
+        color: var(--accent-2);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .article-nav a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  )}
 </head>
 <body>
 
@@ -37,13 +69,27 @@ const {
   </div>
   <div class="bg-overlay"></div>
 
-  <!-- Pinned Hero Splash Art — Dissolves as you scroll down -->
-  <div class="hero-splash-container" id="hero-splash">
-    <img src="/heroSplash.webp" alt="Phoenix Hero Artwork" class="hero-splash-img" />
-  </div>
+  <!-- Pinned Hero Splash Art — Rendered ONLY on Home Page -->
+  {isHome && (
+    <div class="hero-splash-container" id="hero-splash">
+      <img src="/heroSplash.webp" alt="Phoenix Hero Artwork" class="hero-splash-img" />
+    </div>
+  )}
 
   <!-- Page Content Container -->
-  <slot />
+  {isHome ? (
+    <slot />
+  ) : (
+    <div class="article-container">
+      <nav class="article-nav">
+        <a href="/">← Back to Jay Salvi</a>
+        <span style="color: var(--muted);">Jay Salvi · જય સાળવી</span>
+      </nav>
+      <main class="article-body">
+        <slot />
+      </main>
+    </div>
+  )}
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -52,22 +98,24 @@ const {
   </footer>
 
   <!-- Fixed Hero Splash Dissolve Script matching BarsatKhadka portfolioV1 -->
-  <script>
-    const heroSplash = document.getElementById('hero-splash');
-    if (heroSplash) {
-      const FADE_DISTANCE = 420;
-      const CEILING = 0.75;
-      
-      const updateOpacity = () => {
-        const scrollY = window.scrollY;
-        const opacity = CEILING * Math.max(0, 1 - scrollY / FADE_DISTANCE);
-        heroSplash.style.opacity = opacity.toString();
-        heroSplash.style.visibility = opacity <= 0.01 ? 'hidden' : 'visible';
-      };
+  {isHome && (
+    <script>
+      const heroSplash = document.getElementById('hero-splash');
+      if (heroSplash) {
+        const FADE_DISTANCE = 420;
+        const CEILING = 0.75;
+        
+        const updateOpacity = () => {
+          const scrollY = window.scrollY;
+          const opacity = CEILING * Math.max(0, 1 - scrollY / FADE_DISTANCE);
+          heroSplash.style.opacity = opacity.toString();
+          heroSplash.style.visibility = opacity <= 0.01 ? 'hidden' : 'visible';
+        };
 
-      updateOpacity();
-      window.addEventListener('scroll', updateOpacity, { passive: true });
-    }
-  </script>
+        updateOpacity();
+        window.addEventListener('scroll', updateOpacity, { passive: true });
+      }
+    </script>
+  )}
 </body>
 </html>
