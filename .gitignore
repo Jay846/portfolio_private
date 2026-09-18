@@ -3,3 +3,5 @@ node_modules/
 dist/
 .ds_store
 .DS_Store
+.vercel
+.env*

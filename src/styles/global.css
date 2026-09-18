@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BarsatKhadka/portfolioV1 Exact CSS System Replicated for Jay Salvi
+   Design System & Styling for Jay Salvi Portfolio
    ========================================================================== */
 
 :root {
@@ -155,7 +155,7 @@ a.link-slide:hover::after {
   height: 2px;
 }
 
-/* ░░ Hero Splash Art — BarsatKhadka portfolioV1 exact dissolve ░░ */
+/* ░░ Hero Splash Art Dissolve ░░ */
 .hero {
   position: relative;
   width: 100%;
