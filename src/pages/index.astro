@@ -263,14 +263,14 @@ import Layout from '../layouts/Layout.astro';
               Upstream CUDA parallel primitives and performance optimizations for GPU-accelerated C++ core algorithms.
             </p>
             <div class="paper-links">
-              <a href="https://github.com/NVIDIA/cccl/pull/10847" target="_blank" rel="noopener">Pull  Request</a>
+              <a href="https://github.com/NVIDIA/cccl/pull/10847" target="_blank" rel="noopener">Merged PR</a>
             </div>
           </div>
 
           <!-- Contribution 2: Apache Arrow -->
           <div class="paper">
             <div class="paper-meta">
-              <span class="tag">C++</span>
+              <span class="tag">C++17</span>
               <span class="tag">Apache / Arrow</span>
             </div>
             <h3 class="paper-title">
@@ -280,7 +280,8 @@ import Layout from '../layouts/Layout.astro';
               High-performance vectorized compute kernel implementation (`CastListView` and `SetBitRunReader` bitmap traversal) in Apache Arrow.
             </p>
             <div class="paper-links">
-              <a href="https://github.com/apache/arrow" target="_blank" rel="noopener">Upstream Repo</a>
+              <span class="tag">Under Review</span> • 
+              <a href="/writing/cast_list_view_kernel_architecture">[Deep Dive Writeup]</a>
             </div>
           </div>
 
@@ -297,7 +298,7 @@ import Layout from '../layouts/Layout.astro';
               Hardware-aligned skew-resilient radix partitioner hook for high-throughput batch execution in Meta Velox.
             </p>
             <div class="paper-links">
-              <a href="https://github.com/facebookincubator/velox" target="_blank" rel="noopener">Upstream Repo</a>
+              <span class="tag">Under Review</span>
             </div>
           </div>
 
@@ -314,7 +315,7 @@ import Layout from '../layouts/Layout.astro';
               Formal instruction decoder patch with zero-overhead glitch detection logic formally verified under bounded model checkers.
             </p>
             <div class="paper-links">
-              <a href="https://github.com/lowRISC/ibex" target="_blank" rel="noopener">Upstream Repo</a>
+              <span class="tag">Under Review</span>
             </div>
           </div>
         </div>
@@ -324,6 +325,24 @@ import Layout from '../layouts/Layout.astro';
       <!-- Section iv: Writing & SOPs -->
       <section id="writing" class="section-block">
         <h2 class="section-head-title">Writings & Technical SOPs</h2>
+
+        <div class="paper">
+          <div class="paper-meta">
+            <span>Sept 18, 2026 · 7 min read</span>
+            <span class="tag">Columnar Engine</span>
+            <span class="tag">Apache Arrow</span>
+            <span class="tag">C++ Kernel Opt</span>
+          </div>
+          <h3 class="paper-title">
+            <a href="/writing/cast_list_view_kernel_architecture">High-Performance Zero-Copy Casting Kernels for Apache Arrow ListView Arrays</a>
+          </h3>
+          <p style="font-size: 15px; color: var(--muted); margin-bottom: 12px;">
+            A deep-dive technical article detailing zero-allocation memory slicing, O(1) contiguous pointer paths, and 64-bit word bitmap scanning for Arrow compute expressions.
+          </p>
+          <div class="paper-links">
+            <a href="/writing/cast_list_view_kernel_architecture">[Read Writeup]</a>
+          </div>
+        </div>
 
         <div class="paper">
           <div class="paper-meta">
@@ -338,7 +357,7 @@ import Layout from '../layouts/Layout.astro';
             A complete technical writeup detailing polygon extraction, footprint classification, diode bridge node recovery, and symbolic Z3 constraint modeling.
           </p>
           <div class="paper-links">
-            <a href="/writing/jane_street_asic_solution_writeup">[Read Writeup ↗]</a>
+            <a href="/writing/jane_street_asic_solution_writeup">[Read Writeup]</a>
           </div>
         </div>
 
