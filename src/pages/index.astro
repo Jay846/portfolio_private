@@ -31,15 +31,15 @@ import Layout from '../layouts/Layout.astro';
         <ul class="news-list">
           <li>
             <span class="news-date">Sept 2026</span>
-            <span class="news-text">Published SVA Formal Verification patch for Ibex RISC-V decoder.</span>
+            <span class="news-text">Neuro-Symbolic Hypothesis Engine.</span>
           </li>
           <li>
             <span class="news-date">August 2026</span>
-            <span class="news-text">Released Blackbox OS frame-aware causal world model on ARC-AGI benchmark.</span>
+            <span class="news-text">Reverse Engineering Jane Street's 2026 ASIC Puzzle.</span> 
           </li>
           <li>
             <span class="news-date">July 2026</span>
-            <span class="news-text">Automated netlist extraction from raw GDSII layout geometries.</span>
+            <span class="news-text">Released Blackbox-OS framework.</span>
           </li>
         </ul>
       </aside>
@@ -85,9 +85,12 @@ import Layout from '../layouts/Layout.astro';
           <a href="https://github.com/Jay846" target="_blank" rel="noopener" class="link-slide">github.com/Jay846</a>
         </div>
         <div class="sidebar-contact-item">
-          <span>🌐</span>
-          <a href="https://jay846.gi" target="_blank" rel="noopener" class="link-slide">jay846.github.io</a>
+          <span>𝕏</span>
+          <a href="https://x.com/salvijay1" target="_blank" rel="noopener" class="link-slide">https://x.com/salvijay1</a>
         </div>
+        <div class="sidebar-contact-item">
+          <span>💼</span>
+          <a href="www.linkedin.com/in/jay-salvi-0787aa245" target="_blank" rel="noopener" class="link-slide">www.linkedin.com/in/jay-salvi-0787aa245</a>
       </div>
 
       <!-- Research Focus -->
@@ -95,9 +98,8 @@ import Layout from '../layouts/Layout.astro';
         <p style="font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px;">Research Focus</p>
         <div style="display: flex; flex-wrap: wrap; gap: 6px;">
           <span class="tag">AI Agent Architectures</span>
-          <span class="tag">Formal Verification</span>
-          <span class="tag">RISC-V Security</span>
-          <span class="tag">Causal World Models</span>
+          <span class="tag">Order Flow Imbalances</span>
+          <span class="tag">Time Series Modeling</span>
           <span class="tag">ASIC Reverse Eng</span>
         </div>
       </div>
@@ -110,7 +112,7 @@ import Layout from '../layouts/Layout.astro';
       <section id="about" class="section-block">
         <h2 class="section-head-title">Currently</h2>
         <p>
-          Working at the intersection of formal hardware security verification and cognitive AI agent architectures. Currently engineering <strong>Blackbox OS</strong> for automated SystemVerilog Assertion (SVA) synthesis and evaluating causal program synthesis engines on the ARC-AGI benchmark.
+          Working at the intersection of formal hardware security verification and cognitive AI agent architectures. Currently engineering <strong>Blackbox OS</strong> for automated system testing.
         </p>
       </section>
 
@@ -267,25 +269,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
 
-          <!-- Contribution 2: Apache Arrow -->
-          <div class="paper">
-            <div class="paper-meta">
-              <span class="tag">C++17</span>
-              <span class="tag">Apache / Arrow</span>
-            </div>
-            <h3 class="paper-title">
-              <a href="https://github.com/apache/arrow" target="_blank" rel="noopener">Apache Arrow Engine</a>
-            </h3>
-            <p style="font-size: 15px; color: var(--muted); margin-bottom: 12px;">
-              High-performance vectorized compute kernel implementation (`CastListView` and `SetBitRunReader` bitmap traversal) in Apache Arrow.
-            </p>
-            <div class="paper-links">
-              <span class="tag">Under Review</span> • 
-              <a href="/writing/cast_list_view_kernel_architecture">[Deep Dive Writeup]</a>
-            </div>
-          </div>
-
-          <!-- Contribution 3: Meta Velox -->
+          <!-- Contribution 2: Meta Velox -->
           <div class="paper">
             <div class="paper-meta">
               <span class="tag">C++20</span>
@@ -302,25 +286,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
 
-          <!-- Contribution 4: lowRISC Ibex -->
-          <div class="paper">
-            <div class="paper-meta">
-              <span class="tag">SystemVerilog</span>
-              <span class="tag">lowRISC / Ibex</span>
-            </div>
-            <h3 class="paper-title">
-              <a href="https://github.com/lowRISC/ibex" target="_blank" rel="noopener">lowRISC Ibex CPU Core</a>
-            </h3>
-            <p style="font-size: 15px; color: var(--muted); margin-bottom: 12px;">
-              Formal instruction decoder patch with zero-overhead glitch detection logic formally verified under bounded model checkers.
-            </p>
-            <div class="paper-links">
-              <span class="tag">Under Review</span>
-            </div>
-          </div>
-        </div>
       </section>
-
 
       <!-- Section iv: Writing & SOPs -->
       <section id="writing" class="section-block">
@@ -341,6 +307,7 @@ import Layout from '../layouts/Layout.astro';
           </p>
           <div class="paper-links">
             <a href="/writing/cast_list_view_kernel_architecture">[Read Writeup]</a>
+            <a href="https://github.com/jay846/arrow" target="_blank" rel="noopener">[Apache Arrow Engine]</a>
           </div>
         </div>
 
@@ -361,31 +328,6 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <div class="paper">
-          <div class="paper-meta">
-            <span>Sept 12, 2026 · 6 min read</span>
-            <span class="tag">Hardware Security</span>
-          </div>
-          <h3 class="paper-title">
-            SOP: Autonomous Tri-Role Agent Verification of Hardware Cores
-          </h3>
-          <p style="font-size: 15px; color: var(--muted); margin-bottom: 12px;">
-            A step-by-step methodology for executing automated SystemVerilog assertion synthesis, bounded model checking, and hardware fault verification.
-          </p>
-        </div>
-
-        <div class="paper">
-          <div class="paper-meta">
-            <span>August 27, 2026 · 10 min read</span>
-            <span class="tag">Causal Reasoning</span>
-          </div>
-          <h3 class="paper-title">
-            Designing Frame-Aware Causal World Models for Program Synthesis
-          </h3>
-          <p style="font-size: 15px; color: var(--muted); margin-bottom: 12px;">
-            How we constructed a frame-aware memory hierarchy and causal analysis pipeline to move beyond brittle heuristic-based program synthesis.
-          </p>
-        </div>
       </section>
 
       <!-- Section v: Contact -->
